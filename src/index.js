@@ -8,6 +8,7 @@ import timer from "./modules/timer";
 import sendForm from "./modules/sendForm";
 import formValid from "./modules/formValid.js";
 import scrollBtn from "./modules/scrollBtn";
+import modalDocuments from "./modules/modalDocuments";
 
 sliders();
 
@@ -16,13 +17,60 @@ modals();
 timer("24 January 2023");
 
 formValid();
+modalDocuments();
 
 sendForm({
   formName: "action-form",
+  someElement: [
+    {
+      id: "calc-total",
+    },
+  ],
 });
 
 sendForm({
   formName: "action-form2",
+  someElement: [
+    {
+      id: "calc-total",
+    },
+  ],
+});
+
+sendForm({
+  formName: "callback-form1",
+  someElement: [
+    {
+      id: "calc-total",
+    },
+  ],
+});
+
+sendForm({
+  formName: "callback-form2",
+  someElement: [
+    {
+      id: "calc-total",
+    },
+  ],
+});
+
+sendForm({
+  formName: "application-form1",
+  someElement: [
+    {
+      id: "calc-total",
+    },
+  ],
+});
+
+sendForm({
+  formName: "application-form2",
+  someElement: [
+    {
+      id: "calc-total",
+    },
+  ],
 });
 
 scrollBtn();

@@ -9,7 +9,6 @@ const scrollBtn = () => {
     scrollButton.style.display = "none";
 
   window.addEventListener("scroll", () => {
-    console.log(firstSectionHeight, window.pageYOffset);
     firstSectionHeight < document.documentElement.scrollTop
       ? (scrollButton.style.display = "block")
       : (scrollButton.style.display = "none");

@@ -1985,6 +1985,47 @@ input.error {
   right: 25px;
   bottom: 25px;
   transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.sertificate-document:hover>.document-overlay {
+  opacity: 1;
+  width: 200px;
+  left: 25%;
+
+}
+
+.load-img {
+  transform: rotate(0deg);
+  transition: transform 1s;
+}
+
+.active {
+  transform: rotate(360deg);
+}
+
+.doc {
+  position: fixed;
+  z-index: 2;
+  top: -5%;
+  left: 27.5%;
+  transform: scale(0.7);
+}
+
+.doc-btn {
+  cursor: pointer;
+  position: fixed;
+  right: -2%;
+  top: -2%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255)
 }
 
 @media (min-width: 576px) {

@@ -12,9 +12,7 @@ const sendForm = ({ formName, someElement = [] }) => {
 
   statusBlock.style.width = "50px";
   statusBlock.style.marginLeft = "115px";
-  statusBlock.style.marginTop = "25px";
-
-  console.log(form);
+  statusBlock.style.marginTop = "36px";
 
   const validate = (list) => {
     let success = true;
@@ -51,11 +49,9 @@ const sendForm = ({ formName, someElement = [] }) => {
 
     form.append(statusBlock);
 
-    console.log(formBody);
-
     someElement.forEach((elem) => {
       const element = document.getElementById(elem.id);
-      if (inputPage.value === "Балконы" && element.textContent != "")
+      if (inputPage.value === "Балконы" && element.value !== "")
         formBody[elem.id] = element.textContent;
     });
 
