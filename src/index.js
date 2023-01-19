@@ -9,6 +9,7 @@ import sendForm from "./modules/sendForm";
 import formValid from "./modules/formValid.js";
 import scrollBtn from "./modules/scrollBtn";
 import modalDocuments from "./modules/modalDocuments";
+import calculator from "./modules/calculator";
 
 sliders();
 
@@ -17,6 +18,7 @@ modals();
 timer("24 January 2023");
 
 formValid();
+
 modalDocuments();
 
 sendForm({
@@ -74,3 +76,5 @@ sendForm({
 });
 
 scrollBtn();
+
+calculator();
