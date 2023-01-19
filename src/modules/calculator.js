@@ -8,6 +8,7 @@ const calculator = () => {
   const calctSelects = [calcType, calcTypeMaterial];
 
   const countCalc = () => {
+    console.log("Вычислилось значение");
     const calcTypeValue = +calcType.options[calcType.selectedIndex].value;
     const calcTypeMaterialValue = !isNaN(
       +calcTypeMaterial.options[calcTypeMaterial.selectedIndex].value
@@ -27,6 +28,7 @@ const calculator = () => {
         !isNaN(+calcType.options[calcType.selectedIndex].value) &&
         calcSquare.value !== ""
       ) {
+        console.log("Вычисление после инпута");
         countCalc();
       } else {
         totalInput.value = "";
@@ -35,6 +37,7 @@ const calculator = () => {
   });
 
   calcSquare.addEventListener("input", () => {
+    calcSquare.value = calcSquare.value.replace(/[^\d]/, "");
     if (!isNaN(+calcType.options[calcType.selectedIndex].value)) {
       countCalc();
     } else {
