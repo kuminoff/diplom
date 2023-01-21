@@ -10,22 +10,33 @@ const modals = () => {
     ".services-modal__close"
   );
 
+  warningHeader.classList.add("animated");
+  warningServices.classList.add("animated");
+
   document.addEventListener("click", (e) => {
     switch (true) {
       case e.target === openBtnHeader || !!e.target.closest(".service-button"):
         e.preventDefault();
         overlay.style.display = "block";
-        e.target === openBtnHeader
-          ? (warningHeader.style.display = "block")
-          : (warningServices.style.display = "block");
+        if (e.target === openBtnHeader) {
+          warningHeader.style.display = "block";
+          warningHeader.classList.add("fadeIn");
+        } else {
+          warningServices.style.display = "block";
+          warningServices.classList.add("fadeIn");
+        }
         break;
 
       case e.target === closeBtnHeader || e.target === closeBtnServices:
         e.preventDefault();
         overlay.style.display = "none";
-        e.target === closeBtnHeader
-          ? (warningHeader.style.display = "none")
-          : (warningServices.style.display = "none");
+        if (e.target === closeBtnHeader) {
+          warningHeader.classList.remove("fadeIn");
+          warningHeader.style.display = "none";
+        } else {
+          warningServices.classList.add("fadeIn");
+          warningServices.style.display = "none";
+        }
         break;
     }
   });

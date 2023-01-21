@@ -1015,8 +1015,6 @@ p.services-image_mobile {
   height: 100px;
 }
 
-.footer-copyright {}
-
 .footer-copyright span {
   color: #ffb135;
 }
@@ -2011,9 +2009,9 @@ input.error {
 .doc {
   position: fixed;
   z-index: 2;
-  top: -5%;
-  left: 27.5%;
-  transform: scale(0.7);
+  top: -31%;
+  left: 22.5%;
+  transform: scale(0.55);
 }
 
 .doc-btn {
@@ -2030,6 +2028,12 @@ input.error {
   -webkit-box-align: center;
   align-items: center;
   background-color: rgb(255, 255, 255)
+}
+
+.comments-load-img {
+  width: 150px;
+  margin: 0 36%;
+  display: block;
 }
 
 @media (min-width: 576px) {
