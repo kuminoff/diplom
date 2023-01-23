@@ -69,7 +69,7 @@ const showComments = (data) => {
       i = 0;
     }
     showCommentsThree();
-  }, 20000);
+  }, 200000000000000);
 };
 
 export default showComments;
